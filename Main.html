@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Generator</title>
+  </head>
+
+  <!--GOOGLE FONT LINK-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!--CONNCECTcss & Logo-->
+  <link rel="stylesheet" href="./CSS/Main.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <body>
+    <h2 class="TITLE">Card Generator</h2>
+
+    <div class="wrapper" id="cardPanel">
+      <h2 class="judul">INPUT CARD</h2>
+
+      <div class="input-box">
+        <span class="icon">
+          <i data-feather="edit"></i>
+        </span>
+        <input type="text" id="titleInput" placeholder="Enter title" required />
+      </div>
+
+      <div class="input-box">
+        <span class="icon">
+          <i data-feather="edit-2"></i>
+        </span>
+        <textarea
+          id="descriptionInput"
+          placeholder="Description"
+          required
+        ></textarea>
+      </div>
+
+      <div class="input-boxFile">
+        <span class="icon">
+          <i data-feather="file"></i>
+        </span>
+        <input
+          type="file"
+          id="imageInput"
+          accept=".png, .jpg, .jpeg"
+          required
+        />
+      </div>
+
+      <div id="notif" style="display: none">
+        Data Tidak Lengkap / Format image salah.
+      </div>
+
+      <div class="input-box">
+        <button type="submit" onclick="generate()">SUBMIT</button>
+      </div>
+    </div>
+
+    <div id="cardCollection"></div>
+  </body>
+  <script src="./JS/Main.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</html>

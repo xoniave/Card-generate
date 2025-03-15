@@ -1,0 +1,200 @@
+body {
+  background: url(../IMG/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TITLE {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+  font-family: "Space Grotesk";
+  font-size: 3em;
+  text-shadow: antiquewhite 0 0 10px, antiquewhite 0 0 20px,
+    antiquewhite 0 0 20px;
+  margin-top: 20px;
+}
+
+.wrapper {
+  position: relative;
+  border: 2px solid rgb(78, 13, 116);
+  border-radius: 20px;
+  box-shadow: 0 0 30px;
+  backdrop-filter: blur(20px) black;
+  width: 400px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.input-boxFile {
+  display: flex;
+  justify-content: center;
+  margin-left: 4rem;
+}
+
+.input-box textarea {
+  height: 80px;
+}
+
+.input-box button {
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  border: 1px solid;
+  text-shadow: antiquewhite 0 0 10px, antiquewhite 0 0 20px,
+    antiquewhite 0 0 20px;
+  border: none;
+  background: transparent;
+}
+
+.input-box button:hover {
+  transform: translateY(-2px);
+  color: aquamarine;
+}
+
+.input-box button::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid;
+  transform: scaleX(0);
+  transition: 0.5s linear;
+}
+
+.input-box button:hover::after {
+  transform: scaleX(0.2);
+}
+
+.judul {
+  display: flex;
+  justify-content: center;
+  text-shadow: rgb(227, 222, 233) 0 0 10px, rgb(237, 228, 245) 0 0 20px,
+    rgb(214, 214, 214) 0 0 20px;
+  color: rgb(15, 6, 31);
+  font-family: "Space Grotesk";
+  border-bottom: 1px solid;
+  width: 50%;
+  margin-left: 6.5rem;
+}
+
+#cardCollection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  box-shadow: 0 0 30px black;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-gambar {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover .Edit,
+.card:hover .Delete {
+  display: block;
+}
+
+.card-Judul {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+  text-shadow: antiquewhite 0 0 10px, antiquewhite 0 0 20px,
+    antiquewhite 0 0 20px;
+  color: antiquewhite;
+}
+
+.card-desc {
+  font-size: 1rem;
+  color: rgb(248, 244, 244);
+  outline: 1rem;
+}
+
+.Edit {
+  background: transparent;
+  border: none;
+  text-shadow: antiquewhite 0 0 10px, antiquewhite 0 0 20px,
+    antiquewhite 0 0 20px;
+  color: antiquewhite;
+  display: none;
+}
+
+.Edit:hover {
+  transform: translateY(-1px);
+  color: rgb(8, 109, 5);
+}
+
+.Edit::after,
+.Delete::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.Edit:hover::after,
+.Delete:hover::after {
+  transform: scaleX(0.7);
+}
+
+.Delete {
+  background: transparent;
+  border: none;
+  text-shadow: antiquewhite 0 0 10px, antiquewhite 0 0 20px,
+    antiquewhite 0 0 20px;
+  color: antiquewhite;
+  display: none;
+}
+
+.Delete:hover {
+  transform: translateY(-1px);
+  color: red;
+}
+
+.tombol {
+  display: flex;
+  justify-content: space-around;
+}
+
+#notif {
+  display: flex;
+  color: red;
+  margin-top: 1rem;
+  justify-content: center;
+}
